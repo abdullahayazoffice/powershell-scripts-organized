@@ -1,0 +1,43 @@
+vnet integration of cosmos db
+rg must have a vnet
+client based division 
+frm based division (pod)-> pod01,pod02,pod03,pod04,pod05
+
+CUST Portal Based division:
+1 rg 1 vnet it has storage account
+
+2 scripts
+
+one for client
+one for frm based
+
+client based:
+all cosmos and storage account will have their own vnet intrated
+then POD01's vnet will also be integrated
+whitelist the vnet of cust portal
+ IP:
+ we have a list and we need to whitelist (for both cosmos and storage account)+ additional ips
+ 
+ POD01-DEV-FRM-VNET-NWK SHOULD ALSO BE WHITELISTED IN ALL THE POD01
+ logic:
+ fetch client based RG of POD0*
+ 
+ 
+
+FRM based
+ its own vnet
+ client of its POD, all the client vnets
+ whitelist the vnet of cust portal
+  IP:
+ we have a list and we need to whitelist (for both cosmos and storage account)+ additional IP
+ 
+ 
+ IP:
+ we have a list and we need to whitelist 
+ 
+ 
+ RG is the same name for storage account 
+ 
+ 
+ 
+ 

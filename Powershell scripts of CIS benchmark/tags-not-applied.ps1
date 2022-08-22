@@ -1,4 +1,4 @@
-$resources = Get-AzResource
+$resources = Get-AzResourceGroup
 $list =foreach($resource in $resources)
 {
     if ($resource.Tags -eq $null)
